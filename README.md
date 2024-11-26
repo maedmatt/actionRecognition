@@ -67,19 +67,18 @@ The script requires:
 - **Checkpoint file**
 - **Label map**
 
-You can download these from the MMAction2 model zoo:
+These files are already included in the repository, so there is no need to download them separately. However, if needed, you can download them from the MMAction2 model zoo:
 
 - **Config**: [configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x8-100e_kinetics400-rgb.py](https://github.com/open-mmlab/mmaction2/tree/main/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x8-100e_kinetics400-rgb.py)
 - **Checkpoint**: [tsn_imagenet-pretrained-r50_8xb32-1x1x8-100e_kinetics400-rgb_20220906-2692d16c.pth](https://download.openmmlab.com/mmaction/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x8-100e_kinetics400-rgb_20220906-2692d16c.pth)
 - **Label Map**: [Kinetics-400 action labels](https://github.com/open-mmlab/mmaction2/blob/main/tools/data/kinetics/label_map.txt)
-
 ### 4. Run the Script
 
 #### Basic Usage
 
 ```bash
 # Ensure you are in the project directory and virtual environment is activated
-python action_recognition_script.py
+python main.py
 ```
 
 #### Configuration Examples
