@@ -1,6 +1,7 @@
 import os
 import os.path as osp
 import re
+import numpy as np
 from typing import Optional, Tuple
 from types import SimpleNamespace
 
@@ -48,7 +49,13 @@ def get_output(
     visualizer = ActionVisualizer()
     visualizer.dataset_meta = dict(classes=labels)
 
-    text_cfg = {'colors': font_color}
+  
+    text_cfg = {
+        'colors': font_color,
+        'positions': np.array([10, 10]),  # Convert to NumPy array
+        'font_sizes': 30 if font_scale is None else font_scale,
+        'font_families': 'monospace',
+    }
     if font_scale is not None:
         text_cfg.update({'font_sizes': font_scale})
 
@@ -73,7 +80,7 @@ def main():
     # Set your arguments here
     args.config = 'configs/config/tsn_imagenet-pretrained-r50_8xb32-1x1x8-100e_kinetics400-rgb.py'  # Update this path
     args.checkpoint = 'configs/checkpoint/tsn_imagenet-pretrained-r50_8xb32-1x1x8-100e_kinetics400-rgb_20220906-2692d16c.pth'  # Update this path
-    args.video = 'input/CIAO.mp4'  # Update this path
+    args.video = 'input/deadlifting.mp4'  # Update this path
     args.label = 'configs/label/label_map_k400.txt'  # Update this path
 
     # Optional arguments
@@ -82,7 +89,7 @@ def main():
     args.fps = 30
     args.font_scale = None
     args.font_color = 'white'
-    args.target_resolution = (640, -1)  # e.g., (width, height)
+    args.target_resolution = (720, -1)  # e.g., (width, height)
     args.out_filename = None  # Set to None initially
 
     cfg = Config.fromfile(args.config)
