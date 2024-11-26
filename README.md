@@ -33,6 +33,7 @@ This Python script uses MMAction2 to perform action recognition on video files. 
 python -m venv action_recognition_env
 source action_recognition_env/bin/activate  # On Windows, use `action_recognition_env\Scripts\activate`
 ### 1. Clone the Repository
+```
 
 ```bash
 git clone https://github.com/your-username/actionRecognition2025.git
