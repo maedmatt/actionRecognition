@@ -30,8 +30,11 @@ This Python script uses MMAction2 to perform action recognition on video files. 
 ### 1. Create a Virtual Environment (Recommended)
 
 ```bash
-python -m venv action_recognition_env
-source action_recognition_env/bin/activate  # On Windows, use `action_recognition_env\Scripts\activate`
+# Create a new Conda environment
+conda create -n action_recognition_env python=3.8 -y
+
+# Activate the environment
+conda activate action_recognition_env
 ```
 
 ```bash
