@@ -38,6 +38,7 @@ conda activate action_recognition_env
 ```
 
 ```bash
+# Clone the repository
 git clone https://github.com/your-username/actionRecognition2025.git
 cd actionRecognition2025
 ```
