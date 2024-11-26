@@ -100,18 +100,6 @@ args.font_color = 'red'  # Change annotation color
 args.target_resolution = (720, -1)  # Resize to 720p width, maintain aspect ratio
 ```
 
-#### Common Run Scenarios
-
-1. **Process Local Video**
-```bash
-python action_recognition_script.py
-```
-
-2. **GPU Processing (if CUDA available)**
-```bash
-CUDA_VISIBLE_DEVICES=0 python action_recognition_script.py
-```
-
 #### Expected Output
 
 When successful, you'll see:
