@@ -57,6 +57,8 @@ mim install mmaction2
 # Additional dependencies
 pip install moviepy opencv-python-headless
 ```
+In case you encounter any issues, refer to the official [MMAction2 installation guide](https://mmaction2.readthedocs.io/en/stable/get_started/installation.html) for detailed instructions.
+
 ## 3. Download Pre-trained Model and Config Files
 
 The script requires:
