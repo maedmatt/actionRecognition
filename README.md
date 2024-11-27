@@ -66,7 +66,7 @@ conda install pytorch torchvision -c pytorch
 
 ### Step 4: Install additional packages (for openmim)
 ```bash
-pip install fsspec decord
+pip install fsspec
 ```
 
 ### Step 5: Install MMEngine, MMCV, MMDetection (optional), and MMPose (optional)
@@ -78,22 +78,22 @@ pip install -U openmim
 
 2. Install **MMEngine**:
 ```bash
-mim install mmengine==0.10.5
+mim install mmengine
 ```
 
 3. Install **MMCV**:
 ```bash
-mim install mmcv==2.0.0
+mim install "mmcv<2.2.0"
 ```
 
 4. (Optional) Install **MMDetection**:
 ```bash
-mim install mmdet==3.2.0
+mim install "mmdet<3.3.0"
 ```
 
 5. (Optional) Install **MMPose**:
 ```bash
-mim install mmpose==1.3.2
+mim install mmpose
 ```
 
 ### Step 6: Install MMAction2
