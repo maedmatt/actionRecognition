@@ -45,16 +45,16 @@ conda activate openmmlab
 
 Install PyTorch based on your platform:
 
-#### For GPU Users:
-
-```bash
-conda install pytorch torchvision -c pytorch
-```
-
 #### For CPU Users:
 
 ```bash
 conda install pytorch torchvision cpuonly -c pytorch
+```
+
+#### For GPU Users:
+
+```bash
+conda install pytorch torchvision -c pytorch
 ```
 
 ### Step 4: Install MMEngine, MMCV, MMDetection (optional), and MMPose (optional)
