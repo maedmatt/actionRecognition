@@ -59,7 +59,7 @@ conda install pytorch torchvision -c pytorch
 
 ### Step 4: Install additional packages (for openmim)
 ```bash
-pip install fsspec
+pip install fsspec decord
 ```
 
 ### Step 5: Install MMEngine, MMCV, MMDetection (optional), and MMPose (optional)
