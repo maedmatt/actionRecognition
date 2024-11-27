@@ -29,7 +29,7 @@ This Python script uses MMAction2 to perform action recognition on video files. 
 
 ### Step 1: Install Miniconda
 
-1. Download and install Miniconda from the official website.
+1. Download and install Miniconda from the [official website](https://docs.anaconda.com/miniconda/).
 2. Follow the installation instructions for your operating system.
 
 ### Step 2: Create and Activate a Conda Environment
