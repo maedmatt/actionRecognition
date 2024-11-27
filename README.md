@@ -45,13 +45,13 @@ conda activate openmmlab
 
 Install PyTorch based on your platform:
 
-### For GPU Users:
+#### For GPU Users:
 
 ```bash
 conda install pytorch torchvision -c pytorch
 ```
 
-### For CPU Users:
+#### For CPU Users:
 
 ```bash
 conda install pytorch torchvision cpuonly -c pytorch
@@ -88,7 +88,7 @@ mim install mmpose
 
 You can install MMAction2 in one of two ways:
 
-### Option A: Install from Source (Recommended)
+#### Option A: Install from Source (Recommended)
 
 1. Clone the MMAction2 repository:
 ```bash
@@ -106,14 +106,14 @@ pip install -v -e .
 git checkout dev-1.x
 ```
 
-### Option B: Install as a Python Package
+#### Option B: Install as a Python Package
 
 Run:
 ```bash
 pip install mmaction2
 ```
 
-## Step 6: Verify Installation
+### Step 6: Verify Installation
 
 Run the following command to verify the installation:
 ```bash
@@ -131,9 +131,9 @@ Install these with:
 pip install moviepy opencv-python-headless
 ```
 
-In case you encounter any issues, refer to the official [MMAction2 installation guide](https://mmaction2.readthedocs.io/en/stable/get_started/installation.html) for detailed instructions.
+**Note**: In case you encounter any issues, refer to the official [MMAction2 installation guide](https://mmaction2.readthedocs.io/en/stable/get_started/installation.html) for detailed instructions.
 
-## 3. Download Pre-trained Model and Config Files
+## Download Pre-trained Model and Config Files
 
 The script requires:
 
@@ -146,25 +146,26 @@ These files are already included in the repository, so there is no need to downl
 - **Config**: [configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x8-100e_kinetics400-rgb.py](https://github.com/open-mmlab/mmaction2/tree/main/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x8-100e_kinetics400-rgb.py)
 - **Checkpoint**: [tsn_imagenet-pretrained-r50_8xb32-1x1x8-100e_kinetics400-rgb_20220906-2692d16c.pth](https://download.openmmlab.com/mmaction/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x8-100e_kinetics400-rgb_20220906-2692d16c.pth)
 - **Label Map**: [Kinetics-400 action labels](https://github.com/open-mmlab/mmaction2/blob/main/tools/data/kinetics/label_map.txt)
-### 4. Run the Script
 
-#### Basic Usage
+## Running the Script
+
+### Basic Usage
 
 ```bash
 # Ensure you are in the project directory and virtual environment is activated
 python main.py
 ```
 
-#### Configuration Examples
+### Configuration Examples
 
-1. **Basic Configuration**
+#### Basic Configuration
 ```python
 # Minimal configuration in main() function
 args.video = 'input/example_video.mp4'  # Path to your input video
 args.device = 'cpu'  # Use CPU (change to 'cuda:0' for GPU)
 ```
 
-2. **Advanced Configuration**
+#### Advanced Configuration
 ```python
 # More detailed configuration options
 args.video = 'input/sports_action.mp4'
@@ -174,7 +175,7 @@ args.font_color = 'red'  # Change annotation color
 args.target_resolution = (720, -1)  # Resize to 720p width, maintain aspect ratio
 ```
 
-#### Expected Output
+### Expected Output
 
 When successful, you'll see:
 ```
@@ -184,7 +185,9 @@ The top label with corresponding score is:
 # Output video will be generated in the 'output/' directory
 ```
 
-#### Potential Errors and Solutions
+## Troubleshooting
+
+### Potential Errors and Solutions
 
 1. **FileNotFoundError**
    - Ensure all paths (video, config, checkpoint) are correct
