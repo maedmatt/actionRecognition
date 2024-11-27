@@ -76,7 +76,7 @@ mim install mmengine==0.10.5
 
 3. Install **MMCV**:
 ```bash
-pip install mmcv==2.0.0
+mim install mmcv==2.0.0
 ```
 
 4. (Optional) Install **MMDetection**:
