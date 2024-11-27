@@ -36,6 +36,13 @@ This Python script uses MMAction2 to perform action recognition on video files. 
 
 Run the following commands to create and activate a new environment:
 
+#### For MacOS Users:
+```bash
+CONDA_SUBDIR=osx-64 conda create --name openmmlab_x86 python=3.8 -y
+conda activate openmmlab_x86
+```
+
+#### For Windows Users:
 ```bash
 conda create --name openmmlab python=3.8 -y
 conda activate openmmlab
