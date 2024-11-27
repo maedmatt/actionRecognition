@@ -66,22 +66,22 @@ pip install -U openmim
 
 2. Install **MMEngine**:
 ```bash
-mim install mmengine
+mim install mmengine==0.10.5
 ```
 
 3. Install **MMCV**:
 ```bash
-mim install mmcv
+pip install mmcv==2.0.0
 ```
 
 4. (Optional) Install **MMDetection**:
 ```bash
-mim install mmdet
+mim install mmdet==3.2.0
 ```
 
 5. (Optional) Install **MMPose**:
 ```bash
-mim install mmpose
+mim install mmpose==1.3.2
 ```
 
 ### Step 5: Install MMAction2
@@ -110,7 +110,7 @@ git checkout dev-1.x
 
 Run:
 ```bash
-pip install mmaction2
+pip install mmaction2==1.2.0
 ```
 
 ### Step 6: Verify Installation
