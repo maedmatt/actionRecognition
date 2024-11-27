@@ -27,36 +27,110 @@ This Python script uses MMAction2 to perform action recognition on video files. 
 
 ## Installation
 
-### 1. Create a Virtual Environment (Recommended)
+### Step 1: Install Miniconda
+
+1. Download and install Miniconda from the official website.
+2. Follow the installation instructions for your operating system.
+
+### Step 2: Create and Activate a Conda Environment
+
+Run the following commands to create and activate a new environment:
 
 ```bash
-# Create a new Conda environment
-conda create -n action_recognition_env python=3.8 -y
-
-# Activate the environment
-conda activate action_recognition_env
+conda create --name openmmlab python=3.8 -y
+conda activate openmmlab
 ```
 
+### Step 3: Install PyTorch
+
+Install PyTorch based on your platform:
+
+### For GPU Users:
+
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/actionRecognition2025.git
-cd actionRecognition2025
+conda install pytorch torchvision -c pytorch
 ```
-## 2. Install Dependencies
+
+### For CPU Users:
 
 ```bash
-# Install PyTorch (adjust for your CUDA version)
-pip install torch torchvision torchaudio
+conda install pytorch torchvision cpuonly -c pytorch
+```
 
-# Install MMEngine and MMAction2
-pip install mmengine
+### Step 4: Install MMEngine, MMCV, MMDetection (optional), and MMPose (optional)
+
+1. Install **MIM**:
+```bash
 pip install -U openmim
-mim install mmcv
-mim install mmaction2
+```
 
-# Additional dependencies
+2. Install **MMEngine**:
+```bash
+mim install mmengine
+```
+
+3. Install **MMCV**:
+```bash
+mim install mmcv
+```
+
+4. (Optional) Install **MMDetection**:
+```bash
+mim install mmdet
+```
+
+5. (Optional) Install **MMPose**:
+```bash
+mim install mmpose
+```
+
+### Step 5: Install MMAction2
+
+You can install MMAction2 in one of two ways:
+
+### Option A: Install from Source (Recommended)
+
+1. Clone the MMAction2 repository:
+```bash
+git clone https://github.com/open-mmlab/mmaction2.git
+cd mmaction2
+```
+
+2. Install in editable mode:
+```bash
+pip install -v -e .
+```
+
+3. (Optional) Switch to the development branch for the latest features:
+```bash
+git checkout dev-1.x
+```
+
+### Option B: Install as a Python Package
+
+Run:
+```bash
+pip install mmaction2
+```
+
+## Step 6: Verify Installation
+
+Run the following command to verify the installation:
+```bash
+python -c "import mmaction; print(mmaction.__version__)"
+```
+
+### Optional Dependencies
+
+For additional functionality, you may install:
+- **moviepy**: For video editing.
+- **opencv-python-headless**: For handling images and videos without a display.
+
+Install these with:
+```bash
 pip install moviepy opencv-python-headless
 ```
+
 In case you encounter any issues, refer to the official [MMAction2 installation guide](https://mmaction2.readthedocs.io/en/stable/get_started/installation.html) for detailed instructions.
 
 ## 3. Download Pre-trained Model and Config Files
